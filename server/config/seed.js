@@ -14,13 +14,19 @@ User.find({}).remove(function() {
     provider: 'local',
     name: 'Test User',
     email: 'test@test.com',
-    password: 'test'
+    password: 'test',
+    points: 0,
+    bio: 'This is a testing bio',
+    city: 'San Francisco'
   }, {
     provider: 'local',
     role: 'admin',
     name: 'Admin',
     email: 'admin@admin.com',
-    password: 'admin'
+    password: 'admin',
+    points: 0,
+    bio: 'This is a testing bio',
+    city: 'San Francisco'
   }, function() {
       console.log('finished populating users');
     }
@@ -45,46 +51,56 @@ Tour.find({}).remove(function() {
       author: user._id,
       description: 'find out the good hiking place hidden here',
       city: 'San Francisco',
-      review: [{body: 'Cool!', rating: 4}],
+      reviews: [{body: 'Cool!', rating: 4}],
       duration: 'All day',
       neighborhood: ['Inner-Sunset'],
-      spots: [{free: true, indoors: true, task: 'play basketball', address: '6th Street'}]
+      spots: [{free:false, outdoors: true, task: 'play basketball', address: '1 Market Street', points: '10'},
+              {free:true, indoors: true, points: '5', task: 'find a basketball'},
+              {indoors: true, points: '20', task: 'run around the court'}]
     },{
       title: 'Hill Conqueror',
       author: user._id,
       description: 'Climb all the hills for some stunning views',
       city: 'San Francisco',
-      review: [{body: 'Cool!', rating: 4}],
+      reviews: [{body: 'Cool!', rating: 4}],
       duration: 'Half day',
       neighborhood: ['Downtown'],
-      spots: [{free: true, indoors: true, task: 'climb the big hill', address: '6th Street'}]
+      spots: [{free:false, outdoors: true, task: 'climb the hill', address: '1 Market Street', points: '15'},
+              {free:true, indoors: true, points: '10', task: 'find something on the hill'},
+              {indoors: true, points: '30', task: 'run up and down the hill'}]
     },{
       title: 'Street Art Explorer',
       author: user._id,
       description: 'Find the best street art',
       city: 'San Francisco',
-      review: [{body: 'Cool!', rating: 4}],
+      reviews: [{body: 'Cool!', rating: 4}],
       duration: 'Half day',
       neighborhood: ['Lakeshore'],
-      spots: [{free: true, indoors: true, task: 'climb the big hill', address: '6th Street'}]
+      spots: [{free:false, outdoors: true, task: 'make good art', address: '1 Market Street', points: '25'},
+              {free:true, indoors: true, points: '15', task: 'make art'},
+              {indoors: true, points: '30', task: 'make better art'}]
     },{
       title: 'Grateful Dead Music Tour',
       author: user._id,
       description: 'A blast back to the 60s',
       city: 'San Francisco',
-      review: [{body: 'Cool!', rating: 4}],
+      reviews: [{body: 'Cool!', rating: 4}],
       duration: 'Many days',
       neighborhood: ['Golden-Gate-Park'],
-      spots: [{free: true, indoors: true, task: 'climb the big hill', address: '6th Street'}]
+      spots: [{free:false, outdoors: true, task: 'listen to music', address: '1 Market Street', points: '25'},
+              {free:true, indoors: true, points: '15', task: 'find good music'},
+              {indoors: true, points: '10', task: 'sing to the music'}]
     },{
       title: 'Farmers\' Market Extravaganza',
       author: user._id,
       description: 'All the fresh fruit and veggies',
       city: 'San Francisco',
-      review: [{body: 'Cool!', rating: 4}],
+      reviews: [{body: 'Cool!', rating: 4}],
       duration: 'Around an hour',
       neighborhood: ['Dogpatch'],
-      spots: [{free: true, indoors: true, task: 'climb the big hill', address: '6th Street'}]
+      spots: [{free:false, outdoors: true, task: 'find a steak', address: '1 Market Street', points: '25'},
+              {free:true, indoors: true, points: '15', task: 'find some chicken'},
+              {indoors: true, points: '30', task: 'find some fish'}]
     }]);
   })
 });

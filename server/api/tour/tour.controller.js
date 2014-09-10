@@ -27,6 +27,8 @@ exports.create = function(req, res) {
     if(err) { return handleError(res, err); }
     return res.json(201, tour);
   });
+
+  
 };
 
 // Updates an existing tour in the DB.

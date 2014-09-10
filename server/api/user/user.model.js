@@ -13,6 +13,12 @@ var UserSchema = new Schema({
     type: String,
     default: 'user'
   },
+  // key is tour id, and value is an array of spots with boolean, spot.info, spot.points, spot.completed, spot.percentComplete 
+  tours: { type: Number },
+  city: String,
+  photo: String,
+  bio: String,
+  points: Number,
   hashedPassword: String,
   provider: String,
   salt: String,

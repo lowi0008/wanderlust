@@ -46,12 +46,13 @@ angular.module('wanderlustApp')
   .controller('ToursCtrl', function ($scope, $location, $http, httpGET) {
     
     httpGET.getData(function(data){
+      console.log(data);
       $scope.tours = data;
       console.log($scope.tours);
     });
 
     //route to tour on click
-    $scope.selectedTour = function(){
-        $location.path('/tours/showtour');
+    $scope.selectedTour = function(tourId){
+      $location.path('/tours/showtour').search({tour: tourId});
     };
   });

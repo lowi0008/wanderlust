@@ -20,6 +20,8 @@ angular.module('wanderlustApp')
         var cb = callback || angular.noop;
         var deferred = $q.defer();
 
+        console.log(user);
+
         $http.post('/auth/local', {
           email: user.email,
           password: user.password
@@ -70,6 +72,21 @@ angular.module('wanderlustApp')
             return cb(err);
           }.bind(this)).$promise;
       },
+
+      /**
+       * Change bio
+       */
+      // changeBio: function(bio, callback) {
+      //   var cb = callback || angular.noop;
+
+      //   return User.changeBio({ id: currentUser._id }, {
+      //     bio: bio
+      //   }, function(user) {
+      //     return cb(user);
+      //   }, function(err) {
+      //     return cb(err);
+      //   }).$promise;
+      // },
 
       /**
        * Change password
