@@ -18,6 +18,7 @@ exports.setup = function (User, config) {
         if (!user.authenticate(password)) {
           return done(null, false, { message: 'This password is not correct.' });
         }
+        console.log(user);
         return done(null, user);
       });
     }

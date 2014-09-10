@@ -18,8 +18,15 @@
             <tag-Price></tag-Price>
             <tag-Camera></tag-Camera>
             <tag-Tree></tag-Tree></th>
-          <th class="spotInfo"> {{spot.info}} </th>
+          <th class="spotInfo"> {{spot.task}} </th>
           <th class="spotPoints"> {{spot.points}} </th>
+        </tr>
+      </table>
+
+      <table class="table table-hover reviewsContainer" ng-repeat="review in tours.reviews">
+        <tr>Reviews
+          <th class="reviewBody"> {{review.body}} </th>
+          <th class="reviewRating "> Rating: {{review.rating}} </th>
         </tr>
       </table>
 

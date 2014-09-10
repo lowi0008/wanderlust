@@ -67,3 +67,18 @@
   border-top: 1px solid #ddd;
 }
 
+.reviewsContainer {
+  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.reviewRating {
+  text-align: -webkit-right;
+  width: 10%;
+}
+
+.reviewBody {
+  text-align: -webkit-left;
+  width: 50%;
+}
+
