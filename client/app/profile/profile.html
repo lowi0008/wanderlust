@@ -1,0 +1,33 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="profile-container" ng-model="user">
+
+  <div class="profile-info-container">
+    <div class="profile-image-container">
+      <img src="PROFILE PHOTO SOURCE">
+    </div>
+    
+    <div class="profile-points-container">
+      {{ user.points }}
+    </div>
+    
+    <div class="profile-bio-container">
+      <p class="profile-bio">{{ user.bio }}</p>
+    </div>
+  </div>
+
+  <div class="profile-tours-container">
+    <table class="table table-hover spotsContainer" ng-repeat="tour in user.tours">
+      <tr>
+        <th>
+          <tag-Price></tag-Price>
+          <tag-Camera></tag-Camera>
+          <tag-Tree></tag-Tree>
+         </th>
+         <th>{{tour.name}} - by {{tour.author}} - {{tour.length}}</th>
+         <th>{{ tour[tour].completed }}</th>
+      </tr>
+    </table>
+  </div>
+
+</div>
