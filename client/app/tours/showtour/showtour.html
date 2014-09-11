@@ -22,9 +22,10 @@
           <th class="spotPoints"> {{spot.points}} </th>
         </tr>
       </table>
-
+      <br>
+      <hr>
       <table class="table table-hover reviewsContainer" ng-repeat="review in tours.reviews">
-        <tr>Reviews
+        <tr><span class="reviewTitle">Reviews</span>
           <th class="reviewBody"> {{review.body}} </th>
           <th class="reviewRating "> Rating: {{review.rating}} </th>
         </tr>
