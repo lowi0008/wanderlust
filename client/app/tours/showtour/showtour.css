@@ -77,8 +77,19 @@
   width: 10%;
 }
 
+.reviewBody:before,
+.reviewBody:after {
+  content: '"';
+}
+
 .reviewBody {
-  text-align: -webkit-left;
+  font-style: italic;
   width: 50%;
+}
+
+.reviewTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 

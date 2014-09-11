@@ -14,7 +14,12 @@ var UserSchema = new Schema({
     default: 'user'
   },
   // key is tour id, and value is an array of spots with boolean, spot.info, spot.points, spot.completed, spot.percentComplete 
-  tours: { type: Number },
+  userTours: [{ 
+    tourId: String,
+    tourSpots: [{info: String, points: Number, completed: Boolean }],
+    tourCompleted: Boolean,
+    accumulatedPoints: Number
+  }],
   city: String,
   photo: String,
   bio: String,
