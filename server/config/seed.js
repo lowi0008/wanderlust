@@ -17,7 +17,7 @@ User.find({}).remove(function() {
     password: 'test',
     points: 0, 
     userTours: [{
-      tourId: '5410d8d283443814a00c9bfe', 
+      tourId: '5412383c411ff9aa0125524e', 
       tourSpots: [{
         info: 'Catch Pikachu',
         points: 20,

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-model="tours">
   <div class="row">
 
       <table class="table table-hover spotsContainer" ng-repeat="spot in tours.spots">
@@ -26,5 +26,6 @@
 <footer class="footer">
   <div class="container">
     <button class="btn btn-default" type="button" ng-click="glhf()">Go Exploring!</button>
+    <a ui-sref="tours"><button class="btn btn-default" type="button">Cancel</button></a>
   </div>
 </footer>
